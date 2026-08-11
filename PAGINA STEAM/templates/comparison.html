@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Comparativa · WALK-WISE{% endblock %}
+
+{% block content %}
+
+<section class="section comparison-page">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">✦ Análisis</span>
+            <h1 class="section-title">Comparativa</h1>
+        </div>
+        
+        <div class="comparison-table">
+            <div class="comparison-row header">
+                <div class="comparison-cell">Característica</div>
+                <div class="comparison-cell">Bastón tradicional</div>
+                <div class="comparison-cell">WALK-WISE</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Detección</div>
+                <div class="comparison-cell">❌ Detecta al tocar</div>
+                <div class="comparison-cell">✅ Alerta anticipada de obstáculos</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Localización</div>
+                <div class="comparison-cell">❌ Sin localización</div>
+                <div class="comparison-cell">✅ GPS integrado</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Alertas</div>
+                <div class="comparison-cell">❌ Sin alertas</div>
+                <div class="comparison-cell">✅ Vibración + sonido</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Reconocimiento de amenazas</div>
+                <div class="comparison-cell">❌ No disponible</div>
+                <div class="comparison-cell">✅ Cámara con IA</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Autonomía</div>
+                <div class="comparison-cell">⚠️ Ilimitada (manual)</div>
+                <div class="comparison-cell">✅ 8+ horas de batería recargable</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-cell">Costo</div>
+                <div class="comparison-cell">💰 Bajo</div>
+                <div class="comparison-cell">💰 Accesible</div>
+            </div>
+            <div class="comparison-row highlight-row">
+                <div class="comparison-cell">Seguridad</div>
+                <div class="comparison-cell">⚠️ Limitada</div>
+                <div class="comparison-cell">✅ Mayor seguridad</div>
+            </div>
+        </div>
+        
+        <div class="comparison-summary">
+            <div class="summary-card">
+                <span class="summary-icon">📈</span>
+                <h4>70% más seguro</h4>
+                <p>Detección temprana reduce accidentes (Resultados obtenidos durante las pruebas)</p>
+            </div>
+            <div class="summary-card">
+                <span class="summary-icon">📍</span>
+                <h4>100% localizable</h4>
+                <p>Tranquilidad para familiares</p>
+            </div>
+            <div class="summary-card">
+                <span class="summary-icon">💡</span>
+                <h4>Inteligente</h4>
+                <p>Tecnología al servicio de la independencia</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% set previous_page = '/features' %}
+{% set next_page = '/impact' %}

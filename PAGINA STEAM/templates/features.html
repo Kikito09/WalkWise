@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Características · WALK-WISE{% endblock %}
+
+{% block content %}
+
+<section class="section features-page">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">✦ Tecnología</span>
+            <h1 class="section-title">Características</h1>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📡</div>
+                <h3>Sensor ultrasónico</h3>
+                <p>Detección precisa de obstáculos hasta 4 metros</p>
+                <span class="feature-badge">HC-SR04</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎥</div>
+                <h3>Cámara con IA</h3>
+                <p>Reconocimiento de objetos y amenazas en tiempo real</p>
+                <span class="feature-badge">Visión artificial</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📳</div>
+                <h3>Vibración inteligente</h3>
+                <p>Alertas táctiles para una respuesta inmediata</p>
+                <span class="feature-badge">Motor vibrador</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔊</div>
+                <h3>Buzzer de alerta</h3>
+                <p>Sonido claro y distintivo para advertencias</p>
+                <span class="feature-badge">Alarma sonora</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>GPS integrado</h3>
+                <p>Localización en tiempo real para tranquilidad</p>
+                <span class="feature-badge">NEO-6M</span>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Arduino UNO</h3>
+                <p>Procesamiento rápido y confiable</p>
+                <span class="feature-badge">Microcontrolador</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% set previous_page = '/how-it-works' %}
+{% set next_page = '/comparison' %}

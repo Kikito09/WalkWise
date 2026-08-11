@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}El Problema · WALK-WISE{% endblock %}
+
+{% block content %}
+
+<section class="section problem-page">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">✦ El desafío</span>
+            <h1 class="section-title">El problema</h1>
+        </div>
+        
+        <div class="problem-content">
+            <div class="problem-text">
+                <p class="problem-stat">
+                    <span class="highlight">78 millones</span> de personas en el continente americano<br>
+                    viven con discapacidad visual. segun la <a href="https://www.paho.org/es">OPS</a>.
+                </p>
+                <p class="problem-detail">
+                    Los bastones tradicionales solo detectan obstáculos<br>
+                    <strong>cuando ya hay contacto</strong>, lo que significa:<br><br>
+                    ❌ Golpes y caídas<br>
+                    ❌ Riesgo constante<br>
+                    ❌ Dependencia total
+                </p>
+                <div class="problem-quote">
+                    <blockquote>
+                        "No debería tener que chocar con algo para saber que está ahí."
+                    </blockquote>
+                    <cite>— Usuario de bastón tradicional</cite>
+                </div>
+            </div>
+            <div class="problem-image">
+                <div class="problem-visual">
+                    <span class="visual-icon">🚶</span>
+                    <div class="visual-obstacle">⚠️</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="problem-stats">
+            <div class="stat-card">
+                <span class="stat-number-large">88%</span>
+                <p>De las personas con discapacidad visual se ha accidentado por <a href="https://link.springer.com/article/10.1007/s10209-020-00712-z" target="_blank">detección tardía</a></p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number-large">~55%</span>
+                <p>De los usuarios reportan <a href="https://www.sciencedirect.com/science/article/pii/S1369847825003845?via%3Dihub" target="_blank">miedo al salir solos</a></p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number-large">92%</span>
+                <p>Confiarían en un bastón inteligente segun <a href="https://www.mdpi.com/2227-9032/13/22/2934" target="_blank">estudios del 2025</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="nav-buttons">
+    <div class="container">
+        <div class="nav-buttons-wrapper">
+            <a href="/solution" class="nav-btn next">
+                Siguiente →
+            </a>
+        </div>
+    </div>
+</div>
+
+{% set previous_page = None %}
+{% set next_page = '/solution' %}
+
+{% endblock %}
+

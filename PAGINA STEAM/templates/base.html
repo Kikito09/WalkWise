@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}WALK-WISE · Camina con sabiduría{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ url_for('index') }}">
+                    <span class="logo-icon">✦</span>
+                    <span class="logo-text">WALK-WISE</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" {% if request.endpoint == 'index' %}class="active"{% endif %}>Inicio</a></li>
+                <li><a href="{{ url_for('problem') }}" {% if request.endpoint == 'problem' %}class="active"{% endif %}>Problema</a></li>
+                <li><a href="{{ url_for('solution') }}" {% if request.endpoint == 'solution' %}class="active"{% endif %}>Solución</a></li>
+                <li><a href="{{ url_for('how_it_works') }}" {% if request.endpoint == 'how_it_works' %}class="active"{% endif %}>Cómo funciona</a></li>
+                <li><a href="{{ url_for('features') }}" {% if request.endpoint == 'features' %}class="active"{% endif %}>Características</a></li>
+                <li><a href="{{ url_for('comparison') }}" {% if request.endpoint == 'comparison' %}class="active"{% endif %}>Comparativa</a></li>
+                <li><a href="{{ url_for('impact') }}" {% if request.endpoint == 'impact' %}class="active"{% endif %}>Impacto</a></li>
+                <li><a href="{{ url_for('team') }}" {% if request.endpoint == 'team' %}class="active"{% endif %}>Equipo</a></li>
+            </ul>
+            <div class="nav-hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ===== BOTONES DE NAVEGACIÓN (DESPUÉS DEL CONTENIDO) ===== -->
+    <div class="nav-buttons">
+        <div class="container">
+            <div class="nav-buttons-wrapper">
+                {% if previous_page %}
+                <a href="{{ previous_page }}" class="nav-btn nav-btn-prev">
+                    ← Anterior
+                </a>
+                {% else %}
+                <span></span>
+                {% endif %}
+                
+                {% if next_page %}
+                <a href="{{ next_page }}" class="nav-btn nav-btn-next">
+                    Siguiente →
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">✦ WALK-WISE</span>
+                    <p>Camina con sabiduría</p>
+                </div>
+                <div class="footer-links">
+                    <a href="{{ url_for('index') }}">Inicio</a>
+                    <a href="{{ url_for('problem') }}">Problema</a>
+                    <a href="{{ url_for('solution') }}">Solución</a>
+                    <a href="{{ url_for('features') }}">Características</a>
+                    <a href="{{ url_for('team') }}">Equipo</a>
+                </div>
+                <div class="footer-copy">
+                    <p>© 2026 WALK-WISE · Proyecto de innovación social</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

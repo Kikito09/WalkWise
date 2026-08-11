@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Impacto Social · WALK-WISE{% endblock %}
+
+{% block content %}
+
+<section class="section impact-page">
+    <div class="impact-overlay"></div>
+    <div class="impact-content">
+        <div class="impact-text">
+            <span class="section-tag light">✦ Transformación</span>
+            <h1>Más que tecnología,<br>construimos <span class="gold-text">independencia</span></h1>
+            <p>
+                WALK-WISE no solo es un dispositivo, es una herramienta que<br>
+                devuelve la confianza y la libertad a quienes más lo necesitan.
+            </p>
+            
+            <div class="impact-numbers">
+                <div class="impact-number">
+                    <span class="number">100%</span>
+                    <span class="label">Independencia</span>
+                </div>
+                <div class="impact-number">
+                    <span class="number">24/7</span>
+                    <span class="label">Seguridad</span>
+                </div>
+                <div class="impact-number">
+                    <span class="number">∞</span>
+                    <span class="label">Posibilidades</span>
+                </div>
+            </div>
+            
+            <div class="impact-testimonials">
+                <div class="testimonial">
+                    <blockquote>
+                        "WALK-WISE me ha dado la confianza para salir solo por primera vez en años."
+                    </blockquote>
+                    <cite>— María, usuaria</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Saber que mi abuelo está localizado me da una tranquilidad inmensa."
+                    </blockquote>
+                    <cite>— Carlos, familiar</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% set previous_page = '/comparison' %}
+{% set next_page = '/team' %}

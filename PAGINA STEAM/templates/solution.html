@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Nuestra Solución · WALK-WISE{% endblock %}
+
+{% block content %}
+
+<section class="section solution-page">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">✦ Nuestra respuesta</span>
+            <h1 class="section-title">La solución</h1>
+        </div>
+        
+        <p class="solution-subtitle">WALK-WISE: <span class="gold-text">Un bastón que anticipa el peligro</span></p>
+        
+        <div class="solution-showcase">
+            <div class="solution-device">
+                <div class="device-wrapper">
+                    <span class="device-icon">🦯</span>
+                    <div class="device-tech">
+                        <span class="tech-badge">📡</span>
+                        <span class="tech-badge">🎥</span>
+                        <span class="tech-badge">📍</span>
+                    </div>
+                </div>
+            </div>
+            <div class="solution-benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">📡</span>
+                    <div>
+                        <h4>Detección temprana</h4>
+                        <p>Sensor ultrasónico que identifica obstáculos antes del contacto</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎥</span>
+                    <div>
+                        <h4>Reconocimiento de amenazas</h4>
+                        <p>Cámara con IA para identificar peligros específicos</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📳</span>
+                    <div>
+                        <h4>Alertas inteligentes</h4>
+                        <p>Vibración y sonido para una respuesta inmediata</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📍</span>
+                    <div>
+                        <h4>Localización en tiempo real</h4>
+                        <p>GPS para tranquilidad de los familiares</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+    <div class="container">
+        <div class="nav-buttons-wrapper">
+            <a href="/problem" class="nav-btn prev">
+                ← Anterior
+            </a>
+            <a href="/how-it-works" class="nav-btn next">
+                Siguiente →
+            </a>
+        </div>
+    </div>
+</div>
+
+{% set previous_page = '/problem' %}
+{% set next_page = '/how-it-works' %}
+{% endblock %}

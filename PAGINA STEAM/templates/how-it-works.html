@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}¿Cómo funciona? · WOLK-WISE{% endblock %}
+
+{% block content %}
+<!-- ===== SECCIÓN CÓMO FUNCIONA ===== -->
+<section class="section how-it-works-page">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">✦ Proceso</span>
+            <h1 class="section-title">¿Cómo funciona?</h1>
+        </div>
+        
+        <div class="flow-diagram">
+            <div class="flow-step">
+                <div class="step-number">01</div>
+                <span class="step-icon">📡</span>
+                <h4>Sensor ultrasónico</h4>
+                <p>Detecta obstáculos hasta 1 metro</p>
+                <span class="step-detail">HC-SR04 emite ondas sonoras</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            
+            <div class="flow-step">
+                <div class="step-number">02</div>
+                <span class="step-icon">⚡</span>
+                <h4>Arduino UNO</h4>
+                <p>Procesa la información en milisegundos</p>
+                <span class="step-detail">Microcontrolador principal</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            
+            <div class="flow-step">
+                <div class="step-number">03</div>
+                <span class="step-icon">🎥</span>
+                <h4>Reconocimiento de amenazas</h4>
+                <p>IA identifica objetos peligrosos</p>
+                <span class="step-detail">Cámara + algoritmo de visión</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            
+            <div class="flow-step">
+                <div class="step-number">04</div>
+                <span class="step-icon">📳</span>
+                <h4>Alertas inmediatas</h4>
+                <p>Vibración + Buzzer + Sonido</p>
+                <span class="step-detail">Respuesta táctil y auditiva</span>
+            </div>
+            <div class="flow-arrow">↓</div>
+            
+            <div class="flow-step highlight-step">
+                <div class="step-number">05</div>
+                <span class="step-icon">✅</span>
+                <h4>Usuario seguro</h4>
+                <p>Evita el obstáculo con confianza</p>
+                <span class="step-detail">Independencia garantizada</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% set previous_page = '/solution' %}
+{% set next_page = '/features' %}
