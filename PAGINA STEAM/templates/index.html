@@ -3,45 +3,83 @@
 {% block title %}WALK-WISE · Camina con sabiduría{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-badge">✦ Innovación 2026</div>
-        <h1 class="hero-title">
-            <span class="hero-title-light">Camina con</span><br>
-            <span class="hero-title-bold">Sabiduría</span>
-        </h1>
-        <p class="hero-subtitle">WALK-WISE</p>
-        <p class="hero-description">
-            Un bastón inteligente que anticipa el peligro y brinda<br>
-            independencia a personas con discapacidad visual.
-        </p>
-        <div class="hero-buttons">
-            <a href="{{ url_for('problem') }}" class="btn-primary">Descubrir más →</a>
-            <a href="{{ url_for('features') }}" class="btn-secondary">Ver características</a>
-        </div>
-        <div class="hero-stats">
-            <div class="stat-item">
-                <span class="stat-number">78M</span>
-                <span class="stat-label">Personas con discapacidad visual en América</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Independencia garantizada</span>
-            </div>
+    
+    <!-- ===== ANIMACIÓN DE INTRO ===== -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-logo">
+            <div class="intro-letter">W</div>
+            <div class="intro-name">WalkWise</div>
+            <div class="intro-line"></div>
         </div>
     </div>
-    <div class="hero-baston">
-        <div class="baston-3d">
-            <span class="baston-icon">🦯</span>
-            <div class="baston-glow"></div>
-            <div class="baston-sensors">
-                <span class="sensor-dot"></span>
-                <span class="sensor-dot"></span>
-                <span class="sensor-dot"></span>
+
+    <!-- ===== FONDOS ANIMADOS (ORB) ===== -->
+    <div class="background">
+        <div class="orb orb-blue"></div>
+        <div class="orb orb-green"></div>
+        <div class="orb orb-purple"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✦ Innovación 2026</div>
+            <h1 class="hero-title">
+                <span class="hero-title-light">Camina con</span><br>
+                <span class="hero-title-bold">Sabiduría</span>
+            </h1>
+            <p class="hero-subtitle">WALK-WISE</p>
+            <p class="hero-description">
+                Un bastón inteligente que anticipa el peligro y brinda<br>
+                independencia a personas con discapacidad visual.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('problem') }}" class="btn-primary">Descubrir más →</a>
+                <a href="{{ url_for('features') }}" class="btn-secondary">Ver características</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">78M</span>
+                    <span class="stat-label">Personas con discapacidad visual en América</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Independencia garantizada</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="hero-baston">
+            <div class="baston-3d">
+                <span class="baston-icon">🦯</span>
+                <div class="baston-glow"></div>
+                <div class="baston-sensors">
+                    <span class="sensor-dot"></span>
+                    <span class="sensor-dot"></span>
+                    <span class="sensor-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <!-- Script para la animación de intro -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // La animación se ejecuta automáticamente con CSS
+            // Pero podemos agregar lógica para asegurar que desaparezca
+            const introScreen = document.getElementById('introScreen');
+            
+            // Después de 3.2s (duración de introFadeOut), eliminar del DOM
+            setTimeout(function() {
+                if (introScreen) {
+                    introScreen.style.display = 'none';
+                }
+            }, 4200); // 3.2s + 1s de margen
+        });
+    </script>
 {% endblock %}
