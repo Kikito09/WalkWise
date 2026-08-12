@@ -69,7 +69,7 @@
 {% block scripts %}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Partículas
+            // Generar partículas
             const particlesContainer = document.getElementById('particles');
             if (particlesContainer) {
                 for (let i = 0; i < 50; i++) {
@@ -85,17 +85,14 @@
                 }
             }
 
-            // Eliminar intro correctamente
+            // ELIMINAR LA INTRO COMPLETAMENTE después de la animación
             const introScreen = document.getElementById('introScreen');
             if (introScreen) {
+                // Esperar a que termine la animación (4.2s = 3.2s + 1s de fade)
                 setTimeout(function() {
-                    introScreen.style.opacity = '0';
-                    introScreen.style.pointerEvents = 'none'; // ← DESACTIVA CLICKS
-                    
-                    setTimeout(function() {
-                        introScreen.style.display = 'none';
-                    }, 500);
-                }, 3200);
+                    introScreen.style.display = 'none';
+                    introScreen.style.pointerEvents = 'none';
+                }, 4200);
             }
         });
     </script>
