@@ -67,29 +67,36 @@
 {% endblock %}
 
 {% block scripts %}
-    <!-- Script para la animación de intro -->
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const introScreen = document.getElementById('introScreen');
-            
-            // Cuando termine la animación de fadeOut
-            introScreen.addEventListener('animationend', function(e) {
-                if (e.animationName === 'introFadeOut') {
-                    introScreen.style.display = 'none';
-                    introScreen.style.pointerEvents = 'none';
+            // Partículas
+            const particlesContainer = document.getElementById('particles');
+            if (particlesContainer) {
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.width = (Math.random() * 3 + 2) + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.animationDuration = (Math.random() * 8 + 6) + 's';
+                    particle.style.animationDelay = (Math.random() * 5) + 's';
+                    particlesContainer.appendChild(particle);
                 }
-            });
+            }
 
-            document.addEventListener('DOMContentLoaded', function() {
-    const introScreen = document.getElementById('introScreen');
-    
-    setTimeout(function() {
-        // En lugar de solo opacity, añade una clase que lo oculte
-        introScreen.classList.add('hidden');
-    }, 4200); // 3200 + 1000 del fade
-});
-                }
-            }, 4500);
+            // Eliminar intro correctamente
+            const introScreen = document.getElementById('introScreen');
+            if (introScreen) {
+                setTimeout(function() {
+                    introScreen.style.opacity = '0';
+                    introScreen.style.pointerEvents = 'none'; // ← DESACTIVA CLICKS
+                    
+                    setTimeout(function() {
+                        introScreen.style.display = 'none';
+                    }, 500);
+                }, 3200);
+            }
         });
     </script>
 {% endblock %}
