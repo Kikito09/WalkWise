@@ -1980,3 +1980,51 @@ img {
         justify-content: center;
     }
 }
+
+/* ===== IMAGEN DE PERSONA EN PROBLEMA ===== */
+.problem-person-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    display: block;
+}
+
+/* Ajustar el contenedor para que la imagen se vea bien */
+.problem-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-md);
+    padding: 0;
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 1;
+    border: 1px solid rgba(45, 212, 191, 0.05);
+    box-shadow: 0 0 60px rgba(45, 212, 191, 0.03);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.problem-visual:hover {
+    transform: scale(1.02);
+    border-color: rgba(45, 212, 191, 0.1);
+}
+
+/* Mantener el obstáculo encima de la imagen */
+.visual-obstacle {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--danger);
+    animation: obstacle-warning 2.5s ease-in-out infinite;
+    text-shadow: 0 0 50px rgba(239, 68, 68, 0.1);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes obstacle-warning {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.2; text-shadow: 0 0 20px rgba(239, 68, 68, 0.05); }
+    50% { transform: scale(1.4) rotate(15deg); opacity: 0.9; text-shadow: 0 0 60px rgba(239, 68, 68, 0.2); }
+}
