@@ -33,7 +33,11 @@
             </div>
             <div class="problem-image">
                 <div class="problem-visual">
-                    <span class="visual-icon">🚶</span>
+                    <!-- ===== IMAGEN EN LUGAR DEL EMOJI ===== -->
+                    <img src="{{ url_for('static', filename='images/persona-baston.jpg') }}" 
+                        alt="Persona con bastón" 
+                        class="problem-person-img">
+                    <!-- ===== FIN IMAGEN ===== -->
                     <div class="visual-obstacle">⚠️</div>
                 </div>
             </div>
@@ -55,6 +59,7 @@
         </div>
     </div>
 </section>
+
 <div class="nav-buttons">
     <div class="container">
         <div class="nav-buttons-wrapper">
@@ -69,4 +74,3 @@
 {% set next_page = '/solution' %}
 
 {% endblock %}
-
