@@ -2029,7 +2029,7 @@ img {
     50% { transform: scale(1.4) rotate(15deg); opacity: 0.9; text-shadow: 0 0 60px rgba(239, 68, 68, 0.2); }
 }
 
-/* ===== INTRO SCREEN ===== */
+/* ===== INTRO SCREEN CON DISPLAY NONE AL FINAL ===== */
 .intro-screen {
     position: fixed;
     inset: 0;
@@ -2038,17 +2038,23 @@ img {
     align-items: center;
     justify-content: center;
     background: radial-gradient(circle at center, #202838 0%, #10151f 45%, #080b10 100%);
-    animation: introFadeOut 1s ease 3.2s forwards;
     pointer-events: all;
-}
-animation-fill-mode: forwards;
+    animation: introAnim 4.2s ease forwards; /* 3.2s + 1s de fade */
 }
 
-/* ⭐ AÑADE ESTA CLASE para cuando termine */
-.intro-screen.hidden {
-    display: none !important;
-    pointer-events: none !important;
+/* Animación completa: aparece, se muestra y desaparece */
+@keyframes introAnim {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    70% { opacity: 1; } /* Se mantiene visible */
+    100% { 
+        opacity: 0; 
+        pointer-events: none; /* Desactiva clicks al final */
+        display: none; /* Oculta completamente */
+    }
 }
+
+/* Animaciones internas igual pero con nombres únicos */
 .intro-logo {
     text-align: center;
     animation: introContainer 1.2s ease forwards;
@@ -2099,11 +2105,6 @@ animation-fill-mode: forwards;
 }
 
 /* ===== KEYFRAMES ===== */
-@keyframes introFadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
 @keyframes introContainer {
     0% { transform: scale(0.9); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
@@ -2129,7 +2130,7 @@ animation-fill-mode: forwards;
     100% { width: 120px; }
 }
 
-/* ===== ORB Y PARTICULAS (Background animado) ===== */
+/* ===== ORB Y PARTICULAS ===== */
 .background {
     position: fixed;
     inset: 0;
