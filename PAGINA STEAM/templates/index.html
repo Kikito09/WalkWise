@@ -80,11 +80,14 @@
                 }
             });
 
-            // Fallback por si el evento no se dispara
-            setTimeout(function() {
-                if (introScreen.style.display !== 'none') {
-                    introScreen.style.display = 'none';
-                    introScreen.style.pointerEvents = 'none';
+            document.addEventListener('DOMContentLoaded', function() {
+    const introScreen = document.getElementById('introScreen');
+    
+    setTimeout(function() {
+        // En lugar de solo opacity, añade una clase que lo oculte
+        introScreen.classList.add('hidden');
+    }, 4200); // 3200 + 1000 del fade
+});
                 }
             }, 4500);
         });
