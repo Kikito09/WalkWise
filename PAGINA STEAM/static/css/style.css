@@ -2041,7 +2041,14 @@ img {
     animation: introFadeOut 1s ease 3.2s forwards;
     pointer-events: all;
 }
+animation-fill-mode: forwards;
+}
 
+/* ⭐ AÑADE ESTA CLASE para cuando termine */
+.intro-screen.hidden {
+    display: none !important;
+    pointer-events: none !important;
+}
 .intro-logo {
     text-align: center;
     animation: introContainer 1.2s ease forwards;
